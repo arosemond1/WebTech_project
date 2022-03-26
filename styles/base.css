@@ -3,9 +3,12 @@
 }
 body {
   z-index: 1;
-  background-color: black;
-  /*  background: url("images/background.jpg") no-repeat;*/
+  /*background-color: black;*/
+  background: url("images/background.jpg") no-repeat;
   font-family: "Courier New", Courier, monospace;
+  background: url(images/background.jpg) center fixed no-repeat;
+  background-size: cover;
+  padding: 0px;
 }
 ul.nav {
   display: block;
@@ -40,7 +43,11 @@ h1 {
   text-align: center;
   color: white;
 }
-.form h2 {text-decoration: underline; text-align: center; padding: 10px;}
+.form h2 {
+  text-decoration: underline;
+  text-align: center;
+  padding: 10px;
+}
 .form {
   border-radius: 1px;
   padding: 10px;
@@ -51,7 +58,9 @@ h1 {
   color: aliceblue;
   height: fit-content;
 }
-.form form div {padding: 10px;}
+.form form div {
+  padding: 10px;
+}
 table {
   margin: auto;
   position: relative;
