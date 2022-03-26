@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="icon" href="images/favicon-16x16.png" />
+    <title>Anime</title>
+    <style>
+      ul.nav li:nth-child(2) {
+        background-color: rgb(0, 184, 255);
+      }
+      th,
+      td {
+        padding: 6px;
+      }
+      a {
+        text-decoration: none;
+        color: aliceblue;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Anime Recommendations</h1>
+    <ul class="nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">Anime</a></li>
+      <li><a href="manga.html">Manga</a></li>
+      <li><a href="manhwa.html">Manwha</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="#suggestions">Suggestions</a></li>
+      <li><a href="sitemap.html">Sitemap</a></li>
+    </ul>
+    <br />
+    <table>
+      <tr>
+        <th>Title</th>
+        <th>Genre</th>
+        <th>Rating</th>
+      </tr>
+      <tr>
+        <td>
+          <a
+            href="https://myanimelist.net/anime/5114/Fullmetal_Alchemist__Brotherhood"
+            >Fullmetal Alchemist: Brotherhood</a
+          >
+        </td>
+        <td>Action, Adventure, Comedy, Drama, Fantasy</td>
+        <td>9/10</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="https://myanimelist.net/anime/11061/Hunter_x_Hunter_2011">
+            Hunter x Hunter (2011)</a
+          >
+        </td>
+        <td>Action, Adventure, Fantasy</td>
+        <td>9.5/10</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="https://myanimelist.net/anime/38000/Kimetsu_no_Yaiba"
+            >Kimetsu no Yaiba</a
+          >
+        </td>
+        <td>Action, Supernatural</td>
+        <td>9/10</td>
+      </tr>
+      <tr>
+        <td>
+          <a
+            href="https://myanimelist.net/anime/32182/Mob_Psycho_100?q=mob&cat=anime"
+            >Mob Psycho 100</a
+          >
+        </td>
+        <td>Action, Comedy, Slice of Life, Supernatural</td>
+        <td>9.5/10</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="https://myanimelist.net/anime/1/Cowboy_Bebop"
+            >Cowboy Bebop</a
+          >
+        </td>
+        <td>Action, Adventure, Comedy, Drama, Sci-fi</td>
+        <td>9/10</td>
+      </tr>
+      <caption>
+        Anime
+      </caption>
+    </table>
+    <div class="divider"></div>
+    <div class="form">
+      <h2>Suggestions</h2>
+      <br />
+      <form>
+        <label for="lname">Title:</label>
+        <input type="text" name="title" placeholder="Enter Title" />
+        <div>Type</div>
+        <label for="type"
+          >Anime
+          <input type="radio" id="type" value="Anime" />
+        </label>
+        <label for="type2"
+          >Manga
+          <input type="radio" id="type2" value="Manga" />
+        </label>
+        <label for="type3"
+          >Manhwa
+          <input type="radio" id="type3" value="Manwha" />
+        </label>
+        <div>Genres:</div>
+        <div>
+          <input type="checkbox" name="genres" value="Action" id="genre1" />
+          <label for="genre1">Action</label>
+        </div>
+        <div>
+          <input type="checkbox" name="genre" value="Adventure" id="genre2" />
+          <label for="genre2">Adventure</label>
+        </div>
+        <div>
+          <input type="checkbox" name="genre" value="Comedy" id="genre3" />
+          <label for="genre3">Comedy</label>
+        </div>
+        <div>
+          <input type="checkbox" name="genre" value="Drama" id="genre4" />
+          <label for="genre2">Drama</label>
+        </div>
+        <div>
+          <label for="comments">Additional Thoughts:</label>
+        </div>
+        <div>
+          <textarea name="comments" id="comments" cols="25" rows="4"></textarea>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
