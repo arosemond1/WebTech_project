@@ -42,12 +42,14 @@
       #acttable {
         display: flex;
         flex-direction: column-reverse;
-        max-width: 90%;
+        max-width: 70%;
         flex-wrap:nowrap;
         align-items: center;
         justify-content: center;
         border-collapse: collapse;
       }
+      .big3 {height: 50%;}
+
       #big1 {
         max-height: 400px;
       }
@@ -57,6 +59,7 @@
       #big3 {
         max-height: 400px;
       }
+      td {width: fit-content; text-align: center;}
       #slide-show {
         display: flex;
         max-width: 75%;
@@ -235,6 +238,11 @@
       document.getElementById("on").onclick = function () {
         lswitch();
       };
+      if (window.innerHeight >= 800) {
+        for (let i = 1; i<=3; i++) {
+          document.getElementById("big"+i).style.height = "150px"
+        }
+      }
       //Responsive
     </script>
   </body>

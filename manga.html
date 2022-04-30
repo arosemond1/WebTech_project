@@ -279,6 +279,11 @@
       document.getElementById("on").onclick = function () {
         lswitch();
       };
+      if (window.innerHeight >= 800) {
+        for (let i = 1; i<=3; i++) {
+          document.querySelector("img").style.height = "200px"
+        }
+      }
     </script>
   </body>
 </html>
