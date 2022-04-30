@@ -16,11 +16,6 @@
       ul.nav li:nth-child(1) {
         background-color: rgb(0, 184, 255);
       }
-      img {
-        width: 250px;
-        padding: 10px;
-        height: 400px;
-      }
       tr:nth-child(3) th {
         text-align: justify;
         padding: 10px;
@@ -30,9 +25,56 @@
         position: relative;
         left: 0%;
         width: 100%;
+        margin-right: auto;
+        margin-left: auto;
         padding: 0;
         height: auto;
-        border-radius: 2px;
+        border-radius: 10px;
+      }
+      h2 {
+        padding: 2px;
+        font-size: 30px;
+        text-align: center;
+        color: aliceblue;
+        background-color: black;
+      }
+
+      #acttable {
+        display: flex;
+        flex-direction: column-reverse;
+        max-width: 90%;
+        flex-wrap:nowrap;
+        align-items: center;
+        justify-content: center;
+        border-collapse: collapse;
+      }
+      #big1 {
+        max-height: 400px;
+      }
+      #big2 {
+        max-height: 400px;
+      }
+      #big3 {
+        max-height: 400px;
+      }
+      #slide-show {
+        display: flex;
+        max-width: 75%;
+        position: relative;
+        margin: auto;
+        overflow: hidden;
+        max-height: 550px;
+      }
+      a {
+        text-decoration: none;
+        color: aliceblue;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      button {
+        background-color: black;
+        color: aliceblue;
       }
     </style>
   </head>
@@ -45,117 +87,155 @@
       <li><a href="manga.html">Manga</a></li>
       <li><a href="manhwa.html">Manwha</a></li>
       <li><a href="contact.html">Contact Us</a></li>
-      <li><a href="#suggestions">Suggestions</a></li>
+      <li><a href="suggestions.html">Suggestions</a></li>
       <li><a href="sitemap.html">Sitemap</a></li>
     </ul>
-    <div class="content">
-      <a href="https://myanimelist.net/anime/205/Samurai_Champloo">
-        <img
-          id="gifa"
-          src="images/samurai.jpg"
-          alt="samurai champloo"
-          title="Samurai Champloo"
-      /></a>
-      <div class="divider"></div>
-      <table>
-        <tr>
-          <td>
-            <a href="https://myanimelist.net/anime/21/One_Piece"
-              ><img src="images/onepiece.jpg" alt="one piece" title="One Piece"
-            /></a>
-          </td>
-          <td>
-            <a
-              href="https://myanimelist.net/anime/1735/Naruto__Shippuuden?q=naru&cat=anime"
-              ><img src="images/naruto.png" alt="naruto" title="Naruto"
-            /></a>
-          </td>
-          <td>
-            <a href="https://myanimelist.net/anime/269/Bleach?q=bleac&cat=anime"
-              ><img src="images/bleach.jpg" alt="bleach" title="Bleach"
-            /></a>
-          </td>
-        </tr>
-        <tr>
-          <th>One Piece</th>
-          <th>Naruto</th>
-          <th>Bleach</th>
-        </tr>
-        <tr>
-          <th colspan="3">
-            The Big Three were the three most popular running series during the
-            mid 2000's. Any of these three shows would be a great start for
-            someone who is trying to get into anime.
-          </th>
-        </tr>
-        <caption>
-          <strong>The Big Three of Anime</strong>
-        </caption>
-      </table>
-      <br />
+    <div id="light">
+      <button id="on">Light On</button><button id="off">Light Off</button>
     </div>
-    <div class="divider"></div>
-    <div class="form">
-      <h2>Suggestions</h2>
+    <div class="content">
+      <h2>What I am watching/reading now</h2>
+      <div id="slide-show">
+        <img id="gifa" src="" alt="" title="" />
+      </div>
+      <h2 id="imgcaption"><a href="" id="slidelink"></a></h2>
+      <div class="divider"></div>
+      <div id="table">
+        <table id="acttable">
+          <tr>
+            <td>
+              <a href="https://myanimelist.net/anime/21/One_Piece"
+                ><img
+                  src="images/onepiece.jpg"
+                  alt="one piece"
+                  title="One Piece"
+                  class="big3"
+                  id="big1"
+              /></a>
+            </td>
+            <td>
+              <a
+                href="https://myanimelist.net/anime/1735/Naruto__Shippuuden?q=naru&cat=anime"
+                ><img
+                  src="images/naruto.png"
+                  alt="naruto"
+                  title="Naruto"
+                  class="big3"
+                  id="big2"
+              /></a>
+            </td>
+            <td>
+              <a
+                href="https://myanimelist.net/anime/269/Bleach?q=bleac&cat=anime"
+                ><img
+                  src="images/bleach.jpg"
+                  alt="bleach"
+                  title="Bleach"
+                  class="big3"
+                  id="big3"
+              /></a>
+            </td>
+          </tr>
+
+          <tr>
+            <th><button type="button" id="big1titles">One Piece</button></th>
+            <th><button type="button" id="big2titles">Naruto</button></th>
+            <th><button type="button" id="big3titles">Bleach</button></th>
+          </tr>
+          <tr>
+            <th colspan="3" id="des">
+              The Big Three were the three most popular running series during
+              the mid 2000's. Any of these three shows would be a great start
+              for someone who is trying to get into anime.
+            </th>
+          </tr>
+          <caption>
+            <strong>The Big Three of Anime</strong>
+          </caption>
+        </table>
+      </div>
       <br />
-      <form>
-        <label for="lname">Title:</label>
-        <input type="text" name="title" placeholder="Enter Title" />
-        <div>Type</div>
-        <label for="type"
-          >Anime
-          <input type="radio" id="type" value="Anime" />
-        </label>
-        <label for="type2"
-          >Manga
-          <input type="radio" id="type2" value="Manga" />
-        </label>
-        <label for="type3"
-          >Manhwa
-          <input type="radio" id="type3" value="Manwha" />
-        </label>
-        <div>Genres:</div>
-        <div>
-          <input type="checkbox" name="genres" value="Action" id="genre1" />
-          <label for="genre1">Action</label>
-        </div>
-        <div>
-          <input type="checkbox" name="genre" value="Adventure" id="genre2" />
-          <label for="genre2">Adventure</label>
-        </div>
-        <div>
-          <input type="checkbox" name="genre" value="Comedy" id="genre3" />
-          <label for="genre3">Comedy</label>
-        </div>
-        <div>
-          <input type="checkbox" name="genre" value="Drama" id="genre4" />
-          <label for="genre2">Drama</label>
-        </div>
-        <div>
-          <label for="comments">Additional Thoughts:</label>
-        </div>
-        <div>
-          <textarea name="comments" id="comments" cols="25" rows="4"></textarea>
-        </div>
-        <button type="submit">Submit</button>
-      </form>
     </div>
     <div class="divider"></div>
     <script>
-      function changetogif() {
-        const height = document.getElementById("gifa").style.height;
-        document.getElementById("gifa").src = "images/samurai.gif";
-        document.getElementById("gifa").style.maxHeight = height;
+      let descriptions = [
+        "Gol D. Roger was known as the Pirate King, the strongest and most infamous being to have sailed the Grand Line. The capture and execution of Roger by the World Government brought a change throughout the world. His last words before his death revealed the existence of the greatest treasure in the world, One Piece. It was this revelation that brought about the Grand Age of Pirates, men who dreamed of finding One Piece—which promises an unlimited amount of riches and fame—and quite possibly the pinnacle of glory and the title of the Pirate King. Enter Monkey D. Luffy, a 17-year-old boy who defies your standard definition of a pirate. Rather than the popular persona of a wicked, hardened, toothless pirate ransacking villages for fun, Luffy's reason for being a pirate is one of pure wonder: the thought of an exciting adventure that leads him to intriguing people and ultimately, the promised treasure. Following in the footsteps of his childhood hero, Luffy and his crew travel across the Grand Line, experiencing crazy adventures, unveiling dark mysteries and battling strong enemies, all in order to reach the most coveted of all fortunes—One Piece.",
+        "It has been two and a half years since Naruto Uzumaki left Konohagakure, the Hidden Leaf Village, for intense training following events which fueled his desire to be stronger. Now Akatsuki, the mysterious organization of elite rogue ninja, is closing in on their grand plan which may threaten the safety of the entire shinobi world. Although Naruto is older and sinister events loom on the horizon, he has changed little in personality—still rambunctious and childish—though he is now far more confident and possesses an even greater determination to protect his friends and home. Come whatever may, Naruto will carry on with the fight for what is important to him, even at the expense of his own body, in the continuation of the saga about the boy who wishes to become Hokage.",
+        "Ichigo Kurosaki is an ordinary high schooler—until his family is attacked by a Hollow, a corrupt spirit that seeks to devour human souls. It is then that he meets a Soul Reaper named Rukia Kuchiki, who gets injured while protecting Ichigo's family from the assailant. To save his family, Ichigo accepts Rukia's offer of taking her powers and becomes a Soul Reaper as a result. However, as Rukia is unable to regain her powers, Ichigo is given the daunting task of hunting down the Hollows that plague their town. However, he is not alone in his fight, as he is later joined by his friends—classmates Orihime Inoue, Yasutora Sado, and Uryuu Ishida—who each have their own unique abilities. As Ichigo and his comrades get used to their new duties and support each other on and off the battlefield, the young Soul Reaper soon learns that the Hollows are not the only real threat to the human world.",
+      ];
+      const credit = "<br /><em>Taken from myanimelist.com</em>";
+      let slideindex = 1;
+      const titles = [
+        "Ousama Ranking",
+        "Takt Op. Destiny",
+        "Spy X Family",
+        "Tower of God",
+        "Fire Force",
+        "Vinland Saga",
+      ];
+      const linksto = [
+        "https://myanimelist.net/anime/40834/Ousama_Ranking?q=ousama&cat=anime",
+        "https://myanimelist.net/anime/48556/Takt_Op_Destiny?q=takt&cat=anime",
+        "https://myanimelist.net/anime/50265/Spy_x_Family?q=spy&cat=anime",
+        "https://myanimelist.net/manga/122663/Tower_of_God?q=tower%20of&cat=manga",
+        "https://myanimelist.net/manga/91037/Enen_no_Shouboutai?q=fire%20force&cat=manga",
+        "https://myanimelist.net/manga/642/Vinland_Saga?q=vinla&cat=manga",
+      ];
+      let slide = document.getElementById("gifa");
+      let slidelink = document.getElementById("slidelink");
+      let imgcaption = document.getElementById("imgcaption");
+      function slideshow() {
+        if (slideindex > 6) {
+          slideindex = 1;
+        }
+        document.getElementById("gifa").style.minHeight = 0 + "px";
+        let filename = "images/slides/current" + slideindex + ".webp";
+        slide.src = filename;
+        slide.title = titles[slideindex - 1];
+        slidelink.innerHTML = titles[slideindex - 1];
+        slidelink.href = linksto[slideindex - 1];
+        slideindex++;
+        setTimeout(slideshow, 5000);
+        console.log(slideindex);
       }
-      function changetoimg() {
-        document.getElementById("gifa").src = "images/samurai.jpg";
+      document.querySelector("body").onload = function () {
+        slideshow();
+      };
+      function changedesop() {
+        document.getElementById("des").innerHTML = descriptions[0] + credit;
       }
-      document.getElementById("gifa").onmouseover = function () {
-        changetogif();
+      document.getElementById("big1titles").onclick = function () {
+        changedesop();
       };
-      document.getElementById("gifa").onmouseout = function () {
-        changetoimg();
+      function changedesnt() {
+        document.getElementById("des").innerHTML = descriptions[1] + credit;
+      }
+      document.getElementById("big2titles").onclick = function () {
+        changedesnt();
       };
+      function changedesbl() {
+        document.getElementById("des").innerHTML = descriptions[2] + credit;
+      }
+      document.getElementById("big3titles").onclick = function () {
+        changedesbl();
+      };
+      function lswitch() {
+        document.querySelector("body").style.background =
+          "url(images/lbackground.jpg) center fixed no-repeat";
+        document.querySelector("body").style.backgroundSize = "cover";
+      }
+      function dswitch() {
+        document.querySelector("body").style.background =
+          "url(images/background.jpg) center fixed no-repeat";
+        document.querySelector("body").style.backgroundSize = "cover";
+      }
+      document.getElementById("off").onclick = function () {
+        dswitch();
+      };
+      document.getElementById("on").onclick = function () {
+        lswitch();
+      };
+      //Responsive
     </script>
   </body>
 </html>

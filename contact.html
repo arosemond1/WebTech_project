@@ -7,18 +7,18 @@
     <title>Contact</title>
     <link rel="icon" href="images/favicon-16x16.png" />
     <link rel="stylesheet" href="styles/base.css" />
-  </head>
-  <style>
-    ul.nav li:nth-child(5) {
-      background-color: rgb(0, 184, 255);
-    }
+    <style>
+      ul.nav li:nth-child(5) {
+        background-color: rgb(0, 184, 255);
+      }
 
-    body {
-      background: url(images/background.jpg) center fixed no-repeat;
-      background-size: cover;
-      padding: 0px;
-    }
-  </style>
+      body {
+        background: url(images/background.jpg) center fixed no-repeat;
+        background-size: cover;
+        padding: 0px;
+      }
+    </style>
+  </head>
   <body>
     <h1>Contant Us</h1>
     <ul class="nav">
@@ -27,14 +27,17 @@
       <li><a href="manga.html">Manga</a></li>
       <li><a href="manhwa.html">Manwha</a></li>
       <li><a href="#">Contact Us</a></li>
-      <li><a href="index.html">Suggestions</a></li>
+      <li><a href="suggestions.html">Suggestions</a></li>
       <li><a href="sitemap.html">Sitemap</a></li>
     </ul>
+    <div id="light">
+      <button id="on">Light On</button><button id="off">Light Off</button>
+    </div>
     <div class="form">
-      <h2>Fill Out Form Below</h2>
+      <h2>Fill Out Form Below *Required responses</h2>
       <form>
         <div>
-          <label for="lname">Last Name:</label>
+          <label for="lname">*Last Name:</label>
           <input
             type="text"
             name="Last Name"
@@ -43,7 +46,7 @@
           />
         </div>
         <div>
-          <label for="fname">First Name:</label>
+          <label for="fname">*First Name:</label>
           <input
             type="text"
             name="First Name"
@@ -52,7 +55,7 @@
           />
         </div>
         <div>
-          <label for="email">Email:</label>
+          <label for="email">*Email:</label>
           <input
             type="email"
             name="email address"
@@ -61,7 +64,7 @@
           />
         </div>
         <div>
-          <label for="sub">Subject:</label>
+          <label for="sub">*Subject:</label>
           <input type="text" name="subject" id="sub" placeholder="Subject" />
         </div>
         <div>Message:</div>
@@ -74,10 +77,40 @@
             placeholder="Enter your message here.."
           ></textarea>
         </div>
-        <button type="submit">Send</button>
+        <button type="button" id="submit">Send</button>
         <button type="reset">Clear</button>
       </form>
     </div>
     <div class="divider"></div>
+    <script>
+      function validator() {
+        const fline = document.getElementById("lname").value;
+        const sline = document.getElementById("fname").value;
+        const tline = document.getElementById("email").value;
+        const qline = document.getElementById("sub").value;
+        if (fline.length == 0|| sline.length == 0 || tline.length == 0 || qline.length == 0) {
+          alert("Please fill out required parts of form");
+        }
+      }
+      document.getElementById("submit").onclick = function () {
+        validator();
+      };
+      function lswitch() {
+        document.querySelector("body").style.background =
+          "url(images/lbackground.jpg) center fixed no-repeat";
+        document.querySelector("body").style.backgroundSize = "cover";
+      }
+      function dswitch() {
+        document.querySelector("body").style.background =
+          "url(images/background.jpg) center fixed no-repeat";
+        document.querySelector("body").style.backgroundSize = "cover";
+      }
+      document.getElementById("off").onclick = function () {
+        dswitch();
+      };
+      document.getElementById("on").onclick = function () {
+        lswitch();
+      };
+    </script>
   </body>
 </html>

@@ -27,6 +27,26 @@
       a:hover {
         text-decoration: underline;
       }
+      #image {
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 10px;
+      }
+      #imgswitch {
+        display: flex;
+        max-width: 75%;
+        position: relative;
+        margin: auto;
+        overflow: hidden;
+        max-height: 550px;
+      }
+      h2 {
+        padding: 2px;
+        font-size: 30px;
+        text-align: center;
+        color: aliceblue;
+        background-color: black;
+      }
     </style>
   </head>
   <body>
@@ -37,9 +57,21 @@
       <li><a href="#">Manga</a></li>
       <li><a href="manhwa.html">Manwha</a></li>
       <li><a href="contact.html">Contact Us</a></li>
-      <li><a href="#suggestions">Suggestions</a></li>
+      <li><a href="suggestions.html">Suggestions</a></li>
       <li><a href="sitemap.html">Sitemap</a></li>
     </ul>
+    <div id="light">
+      <button id="on">Light On</button><button id="off">Light Off</button>
+    </div>
+    <div id="imgswitch">
+      <img
+        id="image"
+        src="images/chainsaw.jpg"
+        alt="Chainsaw Man"
+        title="Chainsaw Man"
+      />
+    </div>
+    <h2>Current Favorite for this Category</h2>
     <br />
     <table>
       <tr>
@@ -88,56 +120,165 @@
         <td>Adventure, Drama, Fantasy, Sci-fi</td>
         <td>8/10</td>
       </tr>
+      <tr>
+        <td>
+          <a href="https://myanimelist.net/manga/104039/86">86</a>
+        </td>
+        <td>Action, Drama, Sci-fi</td>
+        <td>9/10</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="https://myanimelist.net/manga/104565/Tokyo%E5%8D%8DRevengers"
+            >Tokyo Revengers</a
+          >
+        </td>
+        <td>Action, Drama, Slice of Life</td>
+        <td>9/10</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="https://myanimelist.net/manga/116778/Chainsaw_Man"
+            >Chainsaw Man</a
+          >
+        </td>
+        <td>Action, Adventure, Supernatural</td>
+        <td>9.5/10</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="https://myanimelist.net/manga/81669/Overlord">Overlord</a>
+        </td>
+        <td>Action, Fantasy, Supernatural</td>
+        <td>9/10</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="https://myanimelist.net/manga/119161/Spy_x_Family"
+            >Spy x Family</a
+          >
+        </td>
+        <td>Action, Comedy</td>
+        <td>9/10</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="https://myanimelist.net/manga/60783/Mob_Psycho_100"
+            >Mob Psycho 100</a
+          >
+        </td>
+        <td>Action, Comedy, Supernatural</td>
+        <td>9.5/10</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="https://myanimelist.net/manga/113138/Jujutsu_Kaisen"
+            >Jujutsu Kaisen</a
+          >
+        </td>
+        <td>Action, Supernatural</td>
+        <td>9.5/10</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="https://myanimelist.net/manga/113138/Jujutsu_Kaisen"
+            >Jujutsu Kaisen</a
+          >
+        </td>
+        <td>Action, Supernatural</td>
+        <td>9.5/10</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="https://myanimelist.net/manga/43/Eyeshield_21"
+            >Eyeshield 21</a
+          >
+        </td>
+        <td>Sports</td>
+        <td>8.5/10</td>
+      </tr>
+      <tr>
+        <td>
+          <a
+            href="https://myanimelist.net/manga/56529/Bungou_Stray_Dogs?q=bungo&cat=manga"
+            >Bungou Stray Dogs</a
+          >
+        </td>
+        <td>Action, Supernatural</td>
+        <td>9/10</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="https://myanimelist.net/manga/36413/Hinamatsuri"
+            >Hinamatsuri</a
+          >
+        </td>
+        <td>Comedy, Supernatural</td>
+        <td>9/10</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="https://myanimelist.net/manga/48399/No_Game_No_Life"
+            >No Game No Life</a
+          >
+        </td>
+        <td>Comedy, Fantasy</td>
+        <td>9/10</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="https://myanimelist.net/manga/1414/SKET_Dance"
+            >SKET Dance
+          </a>
+        </td>
+        <td>Comedy, Drama</td>
+        <td>8.5/10</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="https://myanimelist.net/manga/48347/Ballroom_e_Youkoso"
+            >Ballroom e Youkoso
+          </a>
+        </td>
+        <td>Comedy, Drama, Sports</td>
+        <td>9.5/10</td>
+      </tr>
       <caption>
         Manga
       </caption>
     </table>
     <div class="divider"></div>
-    <div class="form">
-      <h2>Suggestions</h2>
-      <br />
-      <form>
-        <label for="lname">Title:</label>
-        <input type="text" name="title" placeholder="Enter Title" />
-        <div>Type</div>
-        <label for="type"
-          >Anime
-          <input type="radio" id="type" value="Anime" />
-        </label>
-        <label for="type2"
-          >Manga
-          <input type="radio" id="type2" value="Manga" />
-        </label>
-        <label for="type3"
-          >Manhwa
-          <input type="radio" id="type3" value="Manwha" />
-        </label>
-        <div>Genres:</div>
-        <div>
-          <input type="checkbox" name="genres" value="Action" id="genre1" />
-          <label for="genre1">Action</label>
-        </div>
-        <div>
-          <input type="checkbox" name="genre" value="Adventure" id="genre2" />
-          <label for="genre2">Adventure</label>
-        </div>
-        <div>
-          <input type="checkbox" name="genre" value="Comedy" id="genre3" />
-          <label for="genre3">Comedy</label>
-        </div>
-        <div>
-          <input type="checkbox" name="genre" value="Drama" id="genre4" />
-          <label for="genre2">Drama</label>
-        </div>
-        <div>
-          <label for="comments">Additional Thoughts:</label>
-        </div>
-        <div>
-          <textarea name="comments" id="comments" cols="25" rows="4"></textarea>
-        </div>
-        <button type="submit">Submit</button>
-      </form>
-    </div>
-    <div class="divider"></div>
+    <script>
+      function changetogif() {
+        const height = document.getElementById("image").height;
+        document.getElementById("image").src = "images/chainsaw2.gif";
+        document.getElementById("image").style.height = height + "px";
+      }
+      function changetoimg() {
+        document.getElementById("image").src = "images/chainsaw.jpg";
+      }
+      document.getElementById("image").onmouseover = function () {
+        changetogif();
+      };
+      document.getElementById("image").onmouseout = function () {
+        changetoimg();
+      };
+      function lswitch() {
+        document.querySelector("body").style.background =
+          "url(images/lbackground.jpg) center fixed no-repeat";
+        document.querySelector("body").style.backgroundSize = "cover";
+      }
+      function dswitch() {
+        document.querySelector("body").style.background =
+          "url(images/background.jpg) center fixed no-repeat";
+        document.querySelector("body").style.backgroundSize = "cover";
+      }
+      document.getElementById("off").onclick = function () {
+        dswitch();
+      };
+      document.getElementById("on").onclick = function () {
+        lswitch();
+      };
+    </script>
   </body>
 </html>
