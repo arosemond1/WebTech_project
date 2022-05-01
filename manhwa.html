@@ -255,11 +255,15 @@
       document.getElementById("on").onclick = function () {
         lswitch();
       };
-      if (window.innerHeight >= 800) {
-        for (let i = 1; i<=3; i++) {
-          document.querySelector("img").style.height = "200px"
-        }
+      function imgreac() {
+        console.log("1");
+        document.getElementById("image").style.height =
+          window.innerWidth / 3 + "px";
+        setTimeout(imgreac, 100);
       }
+      document.querySelector("body").onload = function () {
+        imgreac();
+      };
     </script>
   </body>
 </html>
