@@ -238,9 +238,10 @@
       document.getElementById("on").onclick = function () {
         lswitch();
       };
+
       if (window.innerHeight >= 640) {
         for (let i = 1; i<=3; i++) {
-          document.getElementById("big"+i).style.height = "150px"
+          document.getElementById("big"+i).style.height = (window.innerWidth/4) +"px"
         }
       }
       //Responsive
